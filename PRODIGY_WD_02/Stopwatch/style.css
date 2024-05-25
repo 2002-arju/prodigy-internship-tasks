@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.container {
+    background-color: #00000a;
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+   
+}
+
+.wrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.wrapper p {
+    position: relative;
+    display: inline-flex;
+    color: #1fe91f;
+    font-size: 45px;
+    margin-bottom: 150px;
+}
+
+.wrapper p::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: #151538;
+    z-index: -1;
+    border-radius: 40%;
+    left: -10%;
+    top: -128%;
+    animation-name: shine;
+    animation-duration: 1s;
+    animation-iteration-count:infinite;
+}
+
+@keyframes shine {
+    0%, 100% {
+        box-shadow: 0px 0px 32px -12px rgba(224, 77, 175, 0.5);
+    }
+
+    50% {
+        box-shadow: 0px 0px 32px 3px rgba(8, 221, 79, 0.5);
+    }
+}
+
+button {
+    background-color: #e608c1;
+    padding: 10px 38px;
+    border: 1px solid #4ccddf;
+    border-radius: 28px;
+    color: #fff;
+    transition: all .2s ease;
+    outline: 0;
+}
+
+button:not(:last-child) {
+    margin-right: 20px;
+}
+
+button:hover,
+button:focus {
+    border-color: #5ef59d;
+    color: #5bdaeb;
+    box-shadow: 0px 4px 27px -12px #48df54;
+
+
+}
